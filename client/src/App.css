@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 2000;
+  }
+  
+  .shadow_cstm{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  
+  .bg1{
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  }
+  
+  .bg2{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  }
+  
+  .bg3{
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  }
+  
+  .bg4{
+    background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+  }
+  
+  .bg5{
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  }
+  
+  .bg6{
+    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+  }
+  
+  .bg7{
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  }
+  
+  .bg8{
+    background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);}
+  
+  .bg9{
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+   background-blend-mode: multiply,multiply;
+  }
+  
+  .bg-10{
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  
+  .bg-11{
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  }
+  
+  .bg-12{
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+   background-blend-mode: multiply;
+  }
+  
+  .bg-13{
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+  }
+  
+  .bg-14{
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  }
+  
+  .bg-15{
+    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+  }
+  
+  .bg-16{
+    background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+  }
+  
+  .bg-17{
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+  }
+  
+  .bg-18{
+    background-color: #E4E4E1;
+   background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+       background-blend-mode: normal, multiply;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }

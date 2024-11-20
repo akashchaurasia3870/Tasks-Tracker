@@ -1,12 +1,13 @@
 import { Tasks } from "../schema/schema_mongodb/tasks_schema.js";
 
-const rp_addTask = async (title,task_lists,user_id,task_id=null)=>{
+const rp_addTask = async (title,task_lists,type,user_id,task_id=null)=>{
 
     try {
 
         let newTask = {
             title,
             task_lists,
+            type,
             created_by:user_id
         }
 

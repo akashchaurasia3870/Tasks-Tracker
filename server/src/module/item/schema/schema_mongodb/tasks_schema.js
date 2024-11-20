@@ -34,6 +34,11 @@ const tasks_schema = new Schema({
         enum:['new','pending','completed'],
         default:'new'
     },
+    type :{
+        type:String,
+        enum:['task','event'],
+        default:'task'
+    },
     priority:{
         type:String,
         enum:['1','2','3','4','5'],

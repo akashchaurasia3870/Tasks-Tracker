@@ -3,8 +3,8 @@ import {svc_signIn,svc_signUp,svc_resetPassword,svc_get_users,svc_findUserByEmai
 const signUp = async (req,res)=>{
    try {
 
-    const {username,email,password} = req.body;
-    const result = await svc_signUp(username,email,password);
+    const {name,email,password} = req.body;
+    const result = await svc_signUp(name,email,password);
     return result;
     
    } catch (error) {

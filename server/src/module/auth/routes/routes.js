@@ -12,12 +12,12 @@ authRouter.post('/signup',async (req,res)=>{
   const result =await signUp(req,res);
   console.log(result);
   
-  res.status(result.status).send(result.data);
+  res.status(result.status).send({"data":result.data});
 })
 
 authRouter.post('/signin',async (req,res)=>{
  const result =await signIn(req,res);
- res.status(result.status).send(result.data);
+ res.status(result.status).send({"data":result.data});
 })
 
 authRouter.post('/signout',async (req,res)=>{
@@ -26,19 +26,19 @@ authRouter.post('/signout',async (req,res)=>{
 
 authRouter.post('/reset_creds',async (req,res)=>{
  const result =await resetPassword(req,res);
- res.status(result.status).send(result.data);
+ res.status(result.status).send({"data":result.data});
 })
 
 authRouter.post('/get_users',async (req,res)=>{
  const result =await getUsers(req,res);
- res.status(result.status).send(result.data);
+ res.status(result.status).send({"data":result.data});
 })
 
 authRouter.get('/google_auth',async (req,res)=>{
  const result =await googleAuth(req,res);
  console.log(result);
  
- res.status(result.status).send(result.data);
+ res.status(result.status).send({"data":result.data});
 })
 
 passport.use(new GoogleStrategy({
@@ -49,6 +49,7 @@ passport.use(new GoogleStrategy({
       'https://www.googleapis.com/auth/userinfo.email',
       'https://www.googleapis.com/auth/userinfo.profile',
       'https://www.googleapis.com/auth/calendar',
+      'https://www.googleapis.com/auth/tasks',
       'openid'
     ],
     accessType: 'offline',
@@ -64,7 +65,8 @@ authRouter.get('/google', passport.authenticate('google', {
   scope: [
     'https://www.googleapis.com/auth/userinfo.email',  // Access to user's email
     'https://www.googleapis.com/auth/userinfo.profile', // Access to user's profile
-    'https://www.googleapis.com/auth/calendar'          // Access to Google Calendar (optional)
+    'https://www.googleapis.com/auth/calendar',
+    'https://www.googleapis.com/auth/tasks'
   ],
   accessType: 'offline',  // This ensures the refresh token is returned
   prompt: 'consent'      // Forces the consent screen to show even if the user has already granted permission

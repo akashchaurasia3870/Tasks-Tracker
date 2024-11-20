@@ -7,8 +7,8 @@ dotenv.config();
 export const getAccessToken = async (userId) => {
   const userToken =await rp_getAuthToken(userId);
 
-  // console.log(userToken.data.accessToken);
-  // console.log(userToken.data.tokenExpiryDate);
+  console.log(userToken.data);
+  console.log(userToken.data.tokenExpiryDate);
   if (userToken.data && new Date(userToken.data.tokenExpiryDate) > new Date()) {
     return userToken.data.accessToken;
   }

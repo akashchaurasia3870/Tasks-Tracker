@@ -4,8 +4,8 @@ import {svc_addTask,svc_updateTask,svc_deleteTask,svc_findTaskByUserID,svc_getTa
 const addTask = async (req,res)=>{
     try {
  
-     const {title,task_lists,user_id} = req.body;
-     const result = await svc_addTask(title,task_lists,user_id);
+     const {title,task_lists,type,user_id} = req.body;
+     const result = await svc_addTask(title,task_lists,type,user_id);
      return result;
      
     } catch (error) {
@@ -16,8 +16,8 @@ const addTask = async (req,res)=>{
 const updateTask = async (req,res)=>{
     try {
  
-     const {task_id,updated_field_obj,user_id} = req.body;
-     const result = await svc_updateTask(task_id,updated_field_obj,user_id);
+     const {task_id,updated_field_obj,user_id,type} = req.body;
+     const result = await svc_updateTask(task_id,updated_field_obj,type,user_id);
      return result;
      
     } catch (error) {
@@ -28,8 +28,8 @@ const updateTask = async (req,res)=>{
 const deleteTask = async (req,res)=>{
     try {
  
-     const {task_id,user_id} = req.body;
-     const result = await svc_deleteTask(task_id,user_id);
+     const {task_id,user_id,type} = req.body;
+     const result = await svc_deleteTask(task_id,user_id,type);
      return result;
      
     } catch (error) {
